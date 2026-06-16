@@ -137,9 +137,10 @@
                     <div class="post-clickable-title">
                         <div class="post-meta">
                             <span class="post-tag-green">APPLIED.STATISTICS</span>
-                            <span class="post-date">FEB 2026</span>
+                            <span class="post-date">APR 2026</span>
                         </div>
-                        <h2 class="post-title">Evaluating 14-Day Ahead Weather Predictions in the City of Manila: A Comparative Multivariate Study of ARIMAX and Lagged Multiple Linear Regression</h2>
+                        <h2 class="post-title">Evaluating 14-Day Ahead Weather Predictions in the City of Manila: A
+                            Comparative Multivariate Study of ARIMAX and Lagged Multiple Linear Regression</h2>
                     </div>
 
                     <div class="post-content-expandable">
@@ -147,33 +148,70 @@
                             <div class="project-abstract">
                                 <h3 class="abstract-title">ABSTRACT</h3>
                                 <p class="abstract-text">
-                                    This study presents a comparative evaluation of Autoregressive Integrated Moving Average with Exogenous Regressors (ARIMAX) 
-                                    and Lagged Multiple Linear Regression models for predicting meteorological variables in Manila. Differentiating predictive 
-                                    accuracy and error propagation for temperature, wind speed, and humidity, we leverage historical weather datasets and 
-                                    exogenous predictors. Results show that while ARIMAX excels in modeling short-term temporal dependencies, Lagged Multiple 
-                                    Linear Regression shows robust stability over longer horizons.
+                                    We compare two methods for predicting Manila's weather 14 days in advance. This
+                                    study focused on forecasting three main variables: mean temperature, relative
+                                    humidity, and mean wind speed.
+                                    Using local weather data from January 2023 to March 2026, we tested a stochastic
+                                    model against a deterministic model, ARIMAX and Lagged Multiple Linear Regression
+                                    (LMLR), respectivelty.
+                                    A comprehensive preprocessing steps was implemented, incorporating stationarity
+                                    testing, first-order differencing, and Principal Component Analysis (PCA) to address
+                                    multicollinearity and dimensionality.
+                                    The dataset was also split into four local seasons: Habagat, Transition, Amihan, and
+                                    Dry Season. In terms of forecasting strategy, ARIMAX predicted recursively while
+                                    LMLR used a multi-step direct approach to keep errors from propagating over the 14
+                                    days.
+                                    We evaluated the models using standard error metrics like RMSE and MAE, alongside
+                                    statistical tests like the Diebold-Mariano test and the Paired Hotelling's T^2 test
+                                    to check the accuracy of the entire 14-day forecast.
+                                    Our results show that both models have different strengths and weaknesses depending
+                                    on the season, highlighting the trade-offs between stochastic and deterministic
+                                    forecasting.
                                 </p>
                                 <div class="abstract-coauthors">
-                                    <strong>Coauthors:</strong> J.D.A., R.M.S., &amp; 4 others &nbsp;|&nbsp; <strong>Adviser:</strong> K.L., PhD
+                                    <strong>Coauthors:</strong> K.N.L., D.L.O., C.M.R., J.S., J.S. &nbsp;|&nbsp;
+                                    <strong>Adviser:</strong> A.A.
                                 </div>
                             </div>
 
                             <div class="project-single-figure">
                                 <div class="figure-card single-figure-card">
                                     <div class="figure-img-container">
-                                        <img src="weather_forecast_comparison.png" alt="ARIMAX vs Lagged Regression Weather Forecast Comparison"
-                                            class="figure-img">
+                                        <img src="arimax_vs_lmlr_plots.png"
+                                            alt="ARIMAX vs LMLR Prediction Forecast Plots" class="figure-img">
                                     </div>
                                     <div class="figure-caption">
-                                        <span class="figure-label">Figure 1.</span> Comparison of predicted vs. actual daily temperature profiles in Manila, contrasting ARIMAX (green) and Lagged MLR (gold) projections over a 14-day forecast window.
+                                        <span class="figure-label">Figure 1.</span> ARIMAX vs. LMLR Prediction Forecast Plots.
                                     </div>
                                 </div>
                             </div>
 
                             <p>
-                                Our analysis provides a quantitative comparison of the error accumulation curves for both forecasting frameworks. 
-                                By mapping exogenous parameters such as solar radiation and barometric pressure, we show the threshold where lagged 
-                                dependencies decay, offering a structured modeling foundation for localized meteorological intelligence.
+                                Figure 1 displays the predicted values generated by both models alongside the actual weather 
+                                observations for temperature, relative humidity, and wind speed over the 14-day horizon. These 
+                                plots reveal how each model tracks seasonal trends and responds to day-to-day weather shifts.
+                            </p>
+
+                            <div class="project-single-figure">
+                                <div class="figure-card single-figure-card">
+                                    <div class="figure-img-container">
+                                        <img src="error_accumulation_points.png"
+                                            alt="ARIMAX vs Lagged Regression Weather Forecast Error Comparison"
+                                            class="figure-img">
+                                    </div>
+                                    <div class="figure-caption">
+                                        <span class="figure-label">Figure 2.</span> Mean Error Accumulation Comparison.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p>
+                                The mean absolute error (MAE) was average acrross the four seasonal folds and plotted
+                                against the lead time. As seen in Figure 2, the LMLR
+                                generally has a steeper error growth curve. The ARIMAX demonstrates superior error
+                                dampening compared to LMLR. The stocahstic Moving Average component
+                                allowed the ARIMAX model to self-correct, whereas the LMLR's direct approach shows a
+                                gradual separation from the actual atmospheric state as the 14-day limit approaches.
                             </p>
                         </div>
 
