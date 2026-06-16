@@ -176,12 +176,12 @@
 
                             <div class="project-single-figure">
                                 <div class="figure-card single-figure-card">
-                                    <div class="figure-img-container">
+                                    <div class="figure-img-container zoomable-container">
                                         <img src="arimax_vs_lmlr_plots.png"
                                             alt="ARIMAX vs LMLR Prediction Forecast Plots" class="figure-img">
                                     </div>
                                     <div class="figure-caption">
-                                        <span class="figure-label">Figure 1.</span> ARIMAX vs. LMLR Prediction Forecast Plots.
+                                        <span class="figure-label">Figure 1.</span> ARIMAX vs. LMLR Prediction Forecast Plots. (Hover to zoom and pan)
                                     </div>
                                 </div>
                             </div>
@@ -355,6 +355,30 @@
                 const targetId = initialHash.substring(1);
                 togglePost(targetId, true, true);
             }
+
+            // Interactive Hover Zoom Effect for Charts
+            const zoomContainers = document.querySelectorAll('.zoomable-container');
+            zoomContainers.forEach(container => {
+                const img = container.querySelector('.figure-img');
+                if (!img) return;
+
+                container.addEventListener('mousemove', (e) => {
+                    const rect = container.getBoundingClientRect();
+                    const x = ((e.clientX - rect.left) / rect.width) * 100;
+                    const y = ((e.clientY - rect.top) / rect.height) * 100;
+                    img.style.transformOrigin = `${x}% ${y}%`;
+                });
+
+                container.addEventListener('mouseenter', () => {
+                    img.style.transform = 'scale(2.2)';
+                });
+
+                container.addEventListener('mouseleave', () => {
+                    img.style.transform = 'scale(1)';
+                    img.style.transformOrigin = 'center center';
+                });
+            });
+
             // All collapsed by default on clean page load
         });
     </script>

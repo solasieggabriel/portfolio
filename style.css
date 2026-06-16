@@ -1340,3 +1340,18 @@ body::after {
     box-shadow: 0 0 12px rgba(250, 204, 21, 0.4);
     transform: translateY(-1px);
 }
+
+/* Zoom and Pan Hover Effect styles */
+.zoomable-container {
+    cursor: zoom-in;
+    position: relative;
+    overflow: hidden;
+}
+
+.zoomable-container .figure-img {
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.zoomable-container:hover .figure-img {
+    transform: scale(2.2);
+}
