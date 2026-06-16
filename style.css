@@ -1341,17 +1341,62 @@ body::after {
     transform: translateY(-1px);
 }
 
-/* Zoom and Pan Hover Effect styles */
+/* Zoom and Pan Controls styles */
 .zoomable-container {
-    cursor: zoom-in;
     position: relative;
+    overflow: hidden;
+    cursor: default;
+}
+
+.zoom-img-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
 }
 
-.zoomable-container .figure-img {
-    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+.zoom-img-wrapper .figure-img {
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
-.zoomable-container:hover .figure-img {
-    transform: scale(2.2);
+.zoom-controls {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    gap: 6px;
+    z-index: 20;
+}
+
+.zoom-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    color: #122119;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.zoom-btn:hover {
+    background: var(--accent-gold);
+    color: var(--canvas);
+    border-color: var(--accent-gold);
+    transform: scale(1.05);
+}
+
+.zoom-btn:active {
+    transform: scale(0.95);
 }

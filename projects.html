@@ -176,12 +176,18 @@
 
                             <div class="project-single-figure">
                                 <div class="figure-card single-figure-card">
-                                    <div class="figure-img-container zoomable-container">
-                                        <img src="arimax_vs_lmlr_plots.png"
-                                            alt="ARIMAX vs LMLR Prediction Forecast Plots" class="figure-img">
+                                    <div class="figure-img-container zoomable-container" id="weather-forecast-zoomable">
+                                        <div class="zoom-controls">
+                                            <button class="zoom-btn zoom-in" title="Zoom In">+</button>
+                                            <button class="zoom-btn zoom-out" title="Zoom Out">−</button>
+                                        </div>
+                                        <div class="zoom-img-wrapper">
+                                            <img src="arimax_vs_lmlr_plots.png"
+                                                alt="ARIMAX vs LMLR Prediction Forecast Plots" class="figure-img">
+                                        </div>
                                     </div>
                                     <div class="figure-caption">
-                                        <span class="figure-label">Figure 1.</span> ARIMAX vs. LMLR Prediction Forecast Plots. (Hover to zoom and pan)
+                                        <span class="figure-label">Figure 1.</span> ARIMAX vs. LMLR Prediction Forecast Plots. (Click +/− to zoom, drag to pan)
                                     </div>
                                 </div>
                             </div>
@@ -356,28 +362,96 @@
                 togglePost(targetId, true, true);
             }
 
-            // Interactive Hover Zoom Effect for Charts
-            const zoomContainers = document.querySelectorAll('.zoomable-container');
-            zoomContainers.forEach(container => {
-                const img = container.querySelector('.figure-img');
-                if (!img) return;
-
-                container.addEventListener('mousemove', (e) => {
-                    const rect = container.getBoundingClientRect();
-                    const x = ((e.clientX - rect.left) / rect.width) * 100;
-                    const y = ((e.clientY - rect.top) / rect.height) * 100;
-                    img.style.transformOrigin = `${x}% ${y}%`;
+            // Click-to-Zoom and Drag-to-Pan implementation
+            const zoomContainer = document.getElementById('weather-forecast-zoomable');
+            if (zoomContainer) {
+                const img = zoomContainer.querySelector('.figure-img');
+                const btnIn = zoomContainer.querySelector('.zoom-in');
+                const btnOut = zoomContainer.querySelector('.zoom-out');
+                
+                let scale = 1;
+                let isDragging = false;
+                let startX = 0, startY = 0;
+                let translateX = 0, translateY = 0;
+                
+                function updateTransform(useTransition = true) {
+                    if (useTransition) {
+                        img.style.transition = 'transform 0.2s cubic-bezier(0.16, 1, 0.3, 1)';
+                    } else {
+                        img.style.transition = 'none';
+                    }
+                    img.style.transform = `scale(${scale}) translate(${translateX / scale}px, ${translateY / scale}px)`;
+                    
+                    if (scale > 1) {
+                        zoomContainer.style.cursor = isDragging ? 'grabbing' : 'grab';
+                    } else {
+                        zoomContainer.style.cursor = 'default';
+                    }
+                }
+                
+                btnIn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    if (scale < 4) {
+                        scale = Math.min(4, scale + 0.5);
+                        updateTransform(true);
+                    }
                 });
-
-                container.addEventListener('mouseenter', () => {
-                    img.style.transform = 'scale(2.2)';
+                
+                btnOut.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    if (scale > 1) {
+                        scale = Math.max(1, scale - 0.5);
+                        if (scale === 1) {
+                            translateX = 0;
+                            translateY = 0;
+                        } else {
+                            const rect = zoomContainer.getBoundingClientRect();
+                            const maxTx = ((rect.width * scale) - rect.width) / 2;
+                            const maxTy = ((rect.height * scale) - rect.height) / 2;
+                            translateX = Math.max(-maxTx, Math.min(maxTx, translateX));
+                            translateY = Math.max(-maxTy, Math.min(maxTy, translateY));
+                        }
+                        updateTransform(true);
+                    }
                 });
-
-                container.addEventListener('mouseleave', () => {
-                    img.style.transform = 'scale(1)';
-                    img.style.transformOrigin = 'center center';
+                
+                zoomContainer.addEventListener('mousedown', (e) => {
+                    if (scale <= 1) return;
+                    e.preventDefault();
+                    isDragging = true;
+                    startX = e.clientX - translateX;
+                    startY = e.clientY - translateY;
+                    updateTransform(false);
                 });
-            });
+                
+                window.addEventListener('mousemove', (e) => {
+                    if (!isDragging) return;
+                    translateX = e.clientX - startX;
+                    translateY = e.clientY - startY;
+                    
+                    const rect = zoomContainer.getBoundingClientRect();
+                    const maxTx = ((rect.width * scale) - rect.width) / 2;
+                    const maxTy = ((rect.height * scale) - rect.height) / 2;
+                    translateX = Math.max(-maxTx, Math.min(maxTx, translateX));
+                    translateY = Math.max(-maxTy, Math.min(maxTy, translateY));
+                    
+                    updateTransform(false);
+                });
+                
+                window.addEventListener('mouseup', () => {
+                    if (isDragging) {
+                        isDragging = false;
+                        updateTransform(true);
+                    }
+                });
+                
+                zoomContainer.addEventListener('mouseleave', () => {
+                    if (isDragging) {
+                        isDragging = false;
+                        updateTransform(true);
+                    }
+                });
+            }
 
             // All collapsed by default on clean page load
         });
