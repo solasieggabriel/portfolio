@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Sieg Gabriel Sola</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="top">
+
+    <nav class="top-banner">
+        <div class="banner-inner">
+            <div class="banner-left">
+                <!-- Empty left column to maintain center alignment -->
+            </div>
+            <div class="banner-brand">
+                <a href="#top">Projects</a>
+            </div>
+            <div class="banner-right">
+                <a href="index.html" class="nav-link">Sieg Gabriel Sola</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="global-wrapper">
+
+        <header class="blog-header">
+            <h1 class="blog-title">PROJECTS ARCHIVE</h1>
+            <p class="blog-description">Brief logs and summaries of my projects across mathematics, statistics, and
+                computing.</p>
+        </header>
+
+        <div class="blog-container">
+
+            <main class="blog-main">
+
+                <article class="blog-post" id="tiling">
+                    <div class="post-clickable-title">
+                        <div class="post-meta">
+                            <span class="post-tag-yellow">PURE.MATHEMATICS</span>
+                            <span class="post-date">DEC 2025</span>
+                        </div>
+                        <h2 class="post-title">Minimum Colors for Non-perfect Coloring of the Eleven Euclidean Uniform
+                            Tilings</h2>
+                    </div>
+
+                    <div class="post-content-expandable">
+                        <div class="post-content">
+                            <div class="project-abstract">
+                                <h3 class="abstract-title">ABSTRACT</h3>
+                                <p class="abstract-text">
+                                    This study investigates the relationship between color symmetry and geometric
+                                    structure of the
+                                    11 Euclidean uniform tilings. A coloring is considered perfect if the tiling's
+                                    symmetries
+                                    preserve the color pattern through transformations. The primary objective of this
+                                    study is to
+                                    determine the minimum number of colors required to guarantee non-perfect coloring
+                                    where symmetry
+                                    is necessarily broken for each tiling. The methodology utilizes group theory,
+                                    specifically analyzing
+                                    transitive tile orbits and stabilizer subgroups. Orbits are classified as Type I,
+                                    those who share
+                                    the symmetries of regular tilings, and otherwise Type II, requiring a derived index
+                                    formula based on
+                                    point group and translation subgroup indices. By generating the complete set of
+                                    perfect coloring numbers
+                                    for each tiling, the minimum non-perfect coloring number is identified as the
+                                    smallest integer not
+                                    present in that set. Results show that regular tilings require minimal colors (2 or
+                                    3) to for non-perfection.
+                                    However, tilings with multiple orbits require significantly more. For example, the
+                                    4.8.8 tiling requires
+                                    7 colors, while the 3.6.3.6 and 3.12.12 tilings both require 23 colors to ensire a
+                                    non-perfect coloring.
+                                    These findings quantify the threshold at which color symmetry is lost and provide a
+                                    structured framework
+                                    for analyzing non-symmetry in mathematical patters.
+                                </p>
+                                <div class="abstract-coauthors">
+                                    <strong>Coauthors:</strong> K.N.L., M.F.P. &nbsp;|&nbsp; <strong>Adviser:</strong>
+                                    K.L., PhD
+                                </div>
+                            </div>
+
+                            <div class="project-single-figure">
+                                <div class="figure-card single-figure-card">
+                                    <div class="figure-img-container">
+                                        <img src="tiling_coloring.png"
+                                            alt="Perfect and Non-Perfect Coloring of Tiling 4.4.4.4" class="figure-img">
+                                    </div>
+                                    <div class="figure-caption">
+                                        <span class="figure-label">Figure 1.</span> Perfect coloring (left) vs.
+                                        non-perfect coloring (right) of the regular tiling 4.4.4.4 with symmetry group
+                                        <em>G</em> = <em>p4m</em>.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p>
+                                Figure 1 illustrates two distinct 2-colorings of the regular 4.4.4.4 tiling, whose full
+                                symmetry
+                                group is G = p4m. On the left, the checkerboard pattern represents a perfect coloring,
+                                where every symmetry
+                                operation of the uncolored tiling preserves or cleanly permutes the color distribution.
+                                On the right yields a
+                                non-perfect coloring, where certain original symmetries (such as specific reflections or
+                                rotations) are broken
+                                by the color arrangement.
+
+                                Importantly, while 2 colors are sufficient to produce a non-perfect coloring here, 2
+                                colors do not represent the absolute
+                                minimum color bound that forces or guarantees non-perfection for this tiling. Because a
+                                2-color allocation can still
+                                result in a perfect coloring (left), using 2 colors does not guarantee
+                                symmetry-breaking. The core goal of this study
+                                is to determine the minimum number of colors required to ensure non-perfection for each
+                                of the 11 Euclidean uniform tilings.
+                            </p>
+                        </div>
+
+                        <div class="post-footer">
+                            <div class="post-tags">
+                                <span class="tag-badge">crystallography</span>
+                                <span class="tag-badge">group theory</span>
+                                <span class="tag-badge">abstract algebra</span>
+                                <span class="tag-badge">undergraduate thesis</span>
+                            </div>
+                            <a href="minimum_colors_blog.html" class="read-more-btn">READ FULL ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="blog-post" id="quantum">
+                    <div class="post-clickable-title">
+                        <div class="post-meta">
+                            <span class="post-tag-green">QUANTUM.COMP</span>
+                            <span class="post-date">February 28, 2025</span>
+                        </div>
+                        <h2 class="post-title">QIL Quantum Tensor Optimizer</h2>
+                    </div>
+
+                    <div class="post-content-expandable">
+                        <div class="post-content">
+                            <p>During my tenure at DOST-ASTI QIL, we developed a system for simulating and executing
+                                multi-dimensional quantum states. The primary hurdle was the high computational cost of
+                                physical qubits mapping on classical NISQ environments.</p>
+
+                            <p>The <strong>QIL Quantum Tensor Optimizer</strong> targets this mapping layer, optimizing
+                                state transformations and gate counts prior to execution. By implementing hybrid
+                                ARIMAX-PCA
+                                statistical tracking, we predictive-model gate layout delays, which reduces overhead by
+                                up
+                                to 14.5%.</p>
+
+                            <pre><code>// Sample tensor layout definition
+const tensorOptimizer = new TensorOptimizer({
+    qubits: 8,
+    depth: 16,
+    noiseMitigation: true
+});
+
+tensorOptimizer.injectState(QuantumState.MULTIDIMENSIONAL_IMAGE);
+const compiledCircuit = tensorOptimizer.compile();
+console.log(`Optimized physical circuit size: ${compiledCircuit.size}`);</code></pre>
+
+                            <p>Future iterations will involve integrating localized linear model mutations for dynamic
+                                error
+                                tracking during continuous execution sweeps.</p>
+                        </div>
+
+                        <div class="post-footer">
+                            <div class="post-tags">
+                                <span class="tag-badge">quantum</span>
+                                <span class="tag-badge">compilers</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+            </main>
+
+            <aside class="blog-sidebar">
+                <div class="sidebar-widget toc-widget">
+                    <h3 class="widget-title">Table of Contents</h3>
+                    <ul class="toc-list">
+                        <li>
+                            <a href="#tiling" class="toc-link">
+                                <span class="toc-num">01 //</span>
+                                <span class="toc-name">Minimum Colors...</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#quantum" class="toc-link">
+                                <span class="toc-num">02 //</span>
+                                <span class="toc-name">Q-Tensor Optimizer</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+        </div>
+
+        <footer class="site-footer">
+            <div class="footer-grid">
+                <div class="col-left">
+                    <span class="section-index">CONNECT</span>
+                </div>
+                <div class="col-right contact-footer">
+                    <a href="mailto:sieggabrielsola12@gmail.com" class="action-link">LET'S CONNECT! ↗</a>
+                    <!-- <span class="copyright">© 2026 ALL RIGHTS RESERVED.</span> -->
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const posts = document.querySelectorAll('.blog-post');
+            const tocLinks = document.querySelectorAll('.toc-link');
+
+            function togglePost(postId, forceOpen = null, scroll = false) {
+                const post = document.getElementById(postId);
+                if (!post) return;
+
+                const contentExpandable = post.querySelector('.post-content-expandable');
+                if (!contentExpandable) return;
+
+                const isCurrentlyExpanded = post.classList.contains('expanded');
+                const shouldExpand = (forceOpen !== null) ? forceOpen : !isCurrentlyExpanded;
+
+                if (shouldExpand) {
+                    post.classList.add('expanded');
+
+                    // Set maxHeight to scrollHeight to start transition
+                    contentExpandable.style.maxHeight = contentExpandable.scrollHeight + 'px';
+
+                    // Mark corresponding TOC link active
+                    tocLinks.forEach(link => {
+                        if (link.getAttribute('href') === '#' + postId) {
+                            link.classList.add('active');
+                        }
+                    });
+                    if (scroll) {
+                        setTimeout(() => {
+                            post.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }, 100);
+                    }
+                } else {
+                    post.classList.remove('expanded');
+
+                    // If maxHeight was set to 'none', restore it to scrollHeight first to transition
+                    if (contentExpandable.style.maxHeight === 'none') {
+                        contentExpandable.style.maxHeight = contentExpandable.scrollHeight + 'px';
+                        // Force a reflow
+                        contentExpandable.offsetHeight;
+                    }
+
+                    // Animate to 0px
+                    contentExpandable.style.maxHeight = '0px';
+
+                    // Mark corresponding TOC link inactive
+                    tocLinks.forEach(link => {
+                        if (link.getAttribute('href') === '#' + postId) {
+                            link.classList.remove('active');
+                        }
+                    });
+                }
+            }
+
+            // Cleanup max-height after open transition finishes to keep it responsive
+            posts.forEach(post => {
+                const contentExpandable = post.querySelector('.post-content-expandable');
+                if (!contentExpandable) return;
+
+                contentExpandable.addEventListener('transitionend', (e) => {
+                    if (e.propertyName === 'max-height' && post.classList.contains('expanded')) {
+                        contentExpandable.style.maxHeight = 'none';
+                    }
+                });
+
+                // Clicking titles in the main list toggles it independently
+                const header = post.querySelector('.post-clickable-title');
+                if (header) {
+                    header.addEventListener('click', () => {
+                        togglePost(post.id);
+                    });
+                }
+            });
+
+            // Clicking links in the right-side Table of Contents
+            tocLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href').substring(1);
+                    // Force open and scroll to the project
+                    togglePost(targetId, true, true);
+                });
+            });
+
+            // Read URL hash on load (direct link from home page)
+            const initialHash = window.location.hash;
+            if (initialHash) {
+                const targetId = initialHash.substring(1);
+                togglePost(targetId, true, true);
+            }
+            // All collapsed by default on clean page load
+        });
+    </script>
+
+</body>
+
+</html>
