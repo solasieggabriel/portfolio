@@ -133,49 +133,58 @@
                     </div>
                 </article>
 
-                <article class="blog-post" id="quantum">
+                <article class="blog-post" id="weather">
                     <div class="post-clickable-title">
                         <div class="post-meta">
-                            <span class="post-tag-green">QUANTUM.COMP</span>
-                            <span class="post-date">February 28, 2025</span>
+                            <span class="post-tag-green">APPLIED.STATISTICS</span>
+                            <span class="post-date">FEB 2026</span>
                         </div>
-                        <h2 class="post-title">QIL Quantum Tensor Optimizer</h2>
+                        <h2 class="post-title">Evaluating 14-Day Ahead Weather Predictions in the City of Manila: A Comparative Multivariate Study of ARIMAX and Lagged Multiple Linear Regression</h2>
                     </div>
 
                     <div class="post-content-expandable">
                         <div class="post-content">
-                            <p>During my tenure at DOST-ASTI QIL, we developed a system for simulating and executing
-                                multi-dimensional quantum states. The primary hurdle was the high computational cost of
-                                physical qubits mapping on classical NISQ environments.</p>
+                            <div class="project-abstract">
+                                <h3 class="abstract-title">ABSTRACT</h3>
+                                <p class="abstract-text">
+                                    This study presents a comparative evaluation of Autoregressive Integrated Moving Average with Exogenous Regressors (ARIMAX) 
+                                    and Lagged Multiple Linear Regression models for predicting meteorological variables in Manila. Differentiating predictive 
+                                    accuracy and error propagation for temperature, wind speed, and humidity, we leverage historical weather datasets and 
+                                    exogenous predictors. Results show that while ARIMAX excels in modeling short-term temporal dependencies, Lagged Multiple 
+                                    Linear Regression shows robust stability over longer horizons.
+                                </p>
+                                <div class="abstract-coauthors">
+                                    <strong>Coauthors:</strong> J.D.A., R.M.S., &amp; 4 others &nbsp;|&nbsp; <strong>Adviser:</strong> K.L., PhD
+                                </div>
+                            </div>
 
-                            <p>The <strong>QIL Quantum Tensor Optimizer</strong> targets this mapping layer, optimizing
-                                state transformations and gate counts prior to execution. By implementing hybrid
-                                ARIMAX-PCA
-                                statistical tracking, we predictive-model gate layout delays, which reduces overhead by
-                                up
-                                to 14.5%.</p>
+                            <div class="project-single-figure">
+                                <div class="figure-card single-figure-card">
+                                    <div class="figure-img-container">
+                                        <img src="weather_forecast_comparison.png" alt="ARIMAX vs Lagged Regression Weather Forecast Comparison"
+                                            class="figure-img">
+                                    </div>
+                                    <div class="figure-caption">
+                                        <span class="figure-label">Figure 1.</span> Comparison of predicted vs. actual daily temperature profiles in Manila, contrasting ARIMAX (green) and Lagged MLR (gold) projections over a 14-day forecast window.
+                                    </div>
+                                </div>
+                            </div>
 
-                            <pre><code>// Sample tensor layout definition
-const tensorOptimizer = new TensorOptimizer({
-    qubits: 8,
-    depth: 16,
-    noiseMitigation: true
-});
-
-tensorOptimizer.injectState(QuantumState.MULTIDIMENSIONAL_IMAGE);
-const compiledCircuit = tensorOptimizer.compile();
-console.log(`Optimized physical circuit size: ${compiledCircuit.size}`);</code></pre>
-
-                            <p>Future iterations will involve integrating localized linear model mutations for dynamic
-                                error
-                                tracking during continuous execution sweeps.</p>
+                            <p>
+                                Our analysis provides a quantitative comparison of the error accumulation curves for both forecasting frameworks. 
+                                By mapping exogenous parameters such as solar radiation and barometric pressure, we show the threshold where lagged 
+                                dependencies decay, offering a structured modeling foundation for localized meteorological intelligence.
+                            </p>
                         </div>
 
                         <div class="post-footer">
                             <div class="post-tags">
-                                <span class="tag-badge">quantum</span>
-                                <span class="tag-badge">compilers</span>
+                                <span class="tag-badge">forecasting</span>
+                                <span class="tag-badge">statistics</span>
+                                <span class="tag-badge">meteorology</span>
+                                <span class="tag-badge">course project</span>
                             </div>
+                            <a href="weather_predictions_blog.html" class="read-more-btn">READ FULL ↗</a>
                         </div>
                     </div>
                 </article>
@@ -193,9 +202,9 @@ console.log(`Optimized physical circuit size: ${compiledCircuit.size}`);</code><
                             </a>
                         </li>
                         <li>
-                            <a href="#quantum" class="toc-link">
+                            <a href="#weather" class="toc-link">
                                 <span class="toc-num">02 //</span>
-                                <span class="toc-name">Q-Tensor Optimizer</span>
+                                <span class="toc-name">Weather Predictions...</span>
                             </a>
                         </li>
                     </ul>
