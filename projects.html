@@ -128,7 +128,7 @@
                                 <span class="tag-badge">abstract algebra</span>
                                 <span class="tag-badge">undergraduate thesis</span>
                             </div>
-                            <a href="minimum_colors_blog.html" class="read-more-btn">READ FULL ↗</a>
+                            <a href="#" class="read-more-btn" id="open-pdf-btn">READ FULL ↗</a>
                         </div>
                     </div>
                 </article>
@@ -273,6 +273,19 @@
             </div>
         </footer>
 
+    </div>
+
+    <!-- PDF Modal Overlay -->
+    <div id="pdf-modal" class="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title">Minimum Colors Journal</h3>
+                <button class="modal-close-btn" id="close-modal-btn" aria-label="Close modal">CLOSE ✕</button>
+            </div>
+            <div class="modal-body">
+                <iframe src="minimum_colors_journal.pdf" class="pdf-iframe"></iframe>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -453,6 +466,40 @@
                     if (isDragging) {
                         isDragging = false;
                         updateTransform(true);
+                    }
+                });
+            }
+
+            // PDF Modal Functionality
+            const pdfModal = document.getElementById('pdf-modal');
+            const openPdfBtn = document.getElementById('open-pdf-btn');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+
+            if (pdfModal && openPdfBtn && closeModalBtn) {
+                openPdfBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    pdfModal.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // Prevent main page scrolling when modal is open
+                });
+
+                const closeModal = () => {
+                    pdfModal.classList.remove('active');
+                    document.body.style.overflow = ''; // Restore page scrolling
+                };
+
+                closeModalBtn.addEventListener('click', closeModal);
+
+                // Close modal when clicking on the backdrop
+                pdfModal.addEventListener('click', (e) => {
+                    if (e.target === pdfModal) {
+                        closeModal();
+                    }
+                });
+
+                // Close modal with Escape key
+                window.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && pdfModal.classList.contains('active')) {
+                        closeModal();
                     }
                 });
             }
