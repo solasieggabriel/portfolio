@@ -288,7 +288,68 @@ body::after {
 }
 
 .identity-content {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 40px;
+    align-items: stretch;
+}
+
+.profile-link {
+    text-decoration: none;
     display: block;
+    height: 100%;
+}
+
+.profile-frame {
+    width: 100%;
+    height: 100%;
+    background-color: var(--canvas-card);
+    border: 1px solid var(--accent-green);
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.15);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.profile-frame:hover {
+    transform: scale(1.02);
+    border-color: var(--accent-gold);
+    box-shadow: 0 10px 30px rgba(250, 204, 21, 0.1);
+}
+
+.profile-bg {
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    width: 140%;
+    height: 140%;
+    background-image: url('tiling_background.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: 0;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.profile-frame:hover .profile-bg {
+    transform: rotate(4deg) scale(1.05);
+}
+
+.profile-img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.profile-frame:hover .profile-img {
+    transform: scale(1.03);
 }
 
 .hero-statement {
@@ -512,6 +573,17 @@ body::after {
 
     .hero-statement {
         font-size: 1.8rem;
+    }
+
+    .identity-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .profile-frame {
+        max-width: 280px;
+        margin: 0 auto;
+        aspect-ratio: 3/4;
     }
 
     .metric-row {
