@@ -36,6 +36,37 @@
 
             <main class="blog-main">
 
+                <article class="blog-post" id="risk-management">
+                    <div class="post-clickable-title">
+                        <div class="post-meta">
+                            <span class="post-tag-yellow">RISK.MANAGEMENT</span>
+                            <span class="post-date">JUN 2026</span>
+                            <span class="tag-badge">operations research</span>
+                            <span class="tag-badge">algorithmic optimization</span>
+                        </div>
+                        <h2 class="post-title">Simple Dynamic Hedging and Sequential Risk Management Engine</h2>
+                    </div>
+
+                    <div class="post-content-expandable">
+                        <div class="post-content">
+                            <div class="project-abstract">
+                                <h3 class="abstract-title">ABSTRACT</h3>
+                                <p class="abstract-text">
+                                    I made a very simple tool that uses simple logic and basic Python coding to take the
+                                    luck out of risky, step-by-step situations in sports hedging.
+                                </p>
+                            </div>
+
+                            <div class="post-footer">
+                                <a href="#" class="read-more-btn open-pdf-btn"
+                                    data-pdf-src="Dynamic_Hedging_and_Sequential_Risk_Management_Engine.pdf"
+                                    data-pdf-title="Dynamic Hedging and Sequential Risk Management Engine">READ FULL
+                                    ↗</a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
                 <article class="blog-post" id="weather">
                     <div class="post-clickable-title">
                         <div class="post-meta">
@@ -228,7 +259,8 @@
                         </div>
 
                         <div class="post-footer">
-                            <a href="#" class="read-more-btn" id="open-pdf-btn">READ FULL ↗</a>
+                            <a href="#" class="read-more-btn open-pdf-btn" data-pdf-src="minimum_colors_journal.pdf"
+                                data-pdf-title="Minimum Colors Journal">READ FULL ↗</a>
                         </div>
                     </div>
                 </article>
@@ -257,11 +289,11 @@
     <div id="pdf-modal" class="modal-overlay">
         <div class="modal-container">
             <div class="modal-header">
-                <h3 class="modal-title">Minimum Colors Journal</h3>
+                <h3 class="modal-title" id="pdf-modal-title">Minimum Colors Journal</h3>
                 <button class="modal-close-btn" id="close-modal-btn" aria-label="Close modal">CLOSE ✕</button>
             </div>
             <div class="modal-body">
-                <iframe src="minimum_colors_journal.pdf" class="pdf-iframe"></iframe>
+                <iframe src="minimum_colors_journal.pdf" class="pdf-iframe" id="pdf-iframe"></iframe>
             </div>
         </div>
     </div>
@@ -450,14 +482,25 @@
 
             // PDF Modal Functionality
             const pdfModal = document.getElementById('pdf-modal');
-            const openPdfBtn = document.getElementById('open-pdf-btn');
+            const openPdfBtns = document.querySelectorAll('.open-pdf-btn');
             const closeModalBtn = document.getElementById('close-modal-btn');
+            const modalTitle = document.getElementById('pdf-modal-title');
+            const pdfIframe = document.getElementById('pdf-iframe');
 
-            if (pdfModal && openPdfBtn && closeModalBtn) {
-                openPdfBtn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    pdfModal.classList.add('active');
-                    document.body.style.overflow = 'hidden'; // Prevent main page scrolling when modal is open
+            if (pdfModal && openPdfBtns.length > 0 && closeModalBtn) {
+                openPdfBtns.forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        e.preventDefault();
+
+                        const pdfSrc = btn.getAttribute('data-pdf-src');
+                        const pdfTitle = btn.getAttribute('data-pdf-title');
+
+                        if (pdfIframe && pdfSrc) pdfIframe.src = pdfSrc;
+                        if (modalTitle && pdfTitle) modalTitle.textContent = pdfTitle;
+
+                        pdfModal.classList.add('active');
+                        document.body.style.overflow = 'hidden'; // Prevent main page scrolling when modal is open
+                    });
                 });
 
                 const closeModal = () => {
