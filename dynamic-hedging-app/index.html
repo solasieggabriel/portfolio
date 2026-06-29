@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Hedging Strategies</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+</head>
+
+<body>
+    <div class="app-container">
+
+        <!-- HERO VIEW -->
+        <div id="hero-view" class="hero-view">
+            <h1 class="hero-title">Dynamic Hedging</h1>
+            <p class="hero-subtitle">Select a risk management strategy</p>
+
+            <div class="strategy-grid">
+                <div class="strategy-card" data-strategy="A">
+                    <h3>Strategy A</h3>
+                    <p>Absolute Guaranteed Equal Net</p>
+                </div>
+                <div class="strategy-card" data-strategy="B">
+                    <h3>Strategy B</h3>
+                    <p>Confidence-Weighted Hedge Sizing</p>
+                </div>
+                <div class="strategy-card disabled">
+                    <h3>Strategy C</h3>
+                    <p>Coming Soon...</p>
+                </div>
+                <div class="strategy-card disabled">
+                    <h3>Strategy D</h3>
+                    <p>Coming Soon...</p>
+                </div>
+            </div>
+
+            <!-- Info Section (Disclaimer & Glossary) -->
+            <div class="hero-info-section">
+                <div class="disclaimer-box">
+                    <h4>⚠️ Disclaimer & Tool Purpose</h4>
+                    <p>This tool is an analytical utility intended solely to help <strong>minimize potential losses and
+                            manage risk</strong>. It is not intended to promote any specific activities. Additionally,
+                        please note that the math within these strategies is <strong>best suited for sequential
+                            events</strong>. While it can be applied to simultaneous events, overlapping timelines can
+                        cause odds to fluctuate rapidly, making it more difficult to execute your risk management plan
+                        securely.</p>
+                </div>
+
+                <div class="glossary-box">
+                    <h4>📖 Glossary of Terms</h4>
+                    <div class="glossary-grid">
+                        <div class="glossary-item">
+                            <dt>Full Slip</dt>
+                            <dd>The original multi-leg sequence you are trying to protect.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Initial Stake</dt>
+                            <dd>The original amount of money placed on the full slip.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Total Slip Odds</dt>
+                            <dd>The combined multiplier if all legs in the full slip win.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Leg</dt>
+                            <dd>An individual event or component within the full slip sequence.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Hedge</dt>
+                            <dd>A secondary action taken against a specific leg to secure a profit or minimize loss.
+                            </dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Hedge Odds</dt>
+                            <dd>The current multiplier available for betting <em>against</em> your leg.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Sunk Cost</dt>
+                            <dd>The total amount of money already spent on past hedges.</dd>
+                        </div>
+                        <div class="glossary-item">
+                            <dt>Target Hedge Safety Net</dt>
+                            <dd>The exact profit you wish to guarantee if a specific hedge wins.</dd>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- APP VIEW -->
+        <div id="app-view" class="app-view hidden">
+            <header class="glass-panel sticky-header">
+                <div class="header-left">
+                    <button id="btn-back" class="btn-text">← Back to Menu</button>
+                    <h1 id="strategy-title">Strategy Title</h1>
+                    <div class="global-inputs">
+                        <div class="input-group">
+                            <label>Stake (Php)</label>
+                            <input type="number" id="initial-stake" value="100" step="10">
+                        </div>
+                        <div class="input-group">
+                            <label>Slip Odds</label>
+                            <input type="number" id="total-odds" value="3" step="0.5">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard header-right">
+                    <div class="profit-display" id="profit-display">
+                        <div class="profit-amount" id="profit-amount">Php 0.00</div>
+                        <div class="profit-warning" id="profit-warning"></div>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <div class="section-header">
+                    <h2>Legs Sequence</h2>
+                    <button id="add-leg-btn" class="btn-primary">+ Add Leg</button>
+                </div>
+
+                <div id="legs-container" class="legs-container">
+                    <!-- Legs will be injected here via JS -->
+                </div>
+
+                <div class="action-plan-container glass-panel">
+                    <h2>Action Plan For Remaining Legs</h2>
+                    <div id="action-plan-list"></div>
+                    <div id="final-summary" class="final-summary"></div>
+                </div>
+            </main>
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
