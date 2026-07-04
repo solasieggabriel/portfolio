@@ -297,12 +297,11 @@ body::after {
 .profile-link {
     text-decoration: none;
     display: block;
-    height: 100%;
 }
 
 .profile-frame {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 3/4;
     background-color: var(--canvas-card);
     border: 1px solid var(--accent-green);
     box-shadow: 0 0 15px rgba(16, 185, 129, 0.15);
