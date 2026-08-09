@@ -973,8 +973,7 @@ body {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
 
-.blog-post {
-}
+.blog-post {}
 
 .post-content-expandable {
     display: none;
