@@ -6,20 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sieg Gabriel Sola</title>
     <link rel="stylesheet" href="style.css?v=2.0">
+    <script>
+        // Apply theme before paint to avoid flash
+        (function() {
+            var t = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
 </head>
 
 <body id="top">
 
     <nav class="top-banner">
         <div class="banner-inner">
-            <div class="banner-left">
-                <!-- Empty left column to maintain center alignment -->
-            </div>
             <div class="banner-brand">
                 <a href="#top">Sieg Gabriel Sola</a>
             </div>
             <div class="banner-right">
                 <a href="projects.html" class="nav-link">Projects</a>
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">&#9680;</button>
             </div>
         </div>
     </nav>
@@ -76,15 +81,6 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="identity-right-col">
-                            <a href="https://www.linkedin.com/in/sieg-gabriel-sola" target="_blank"
-                                class="profile-link">
-                                <div class="profile-frame">
-                                    <div class="profile-bg"></div>
-                                    <img src="portrait_placeholder.png" alt="Sieg Gabriel Sola" class="profile-img">
-                                </div>
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -99,7 +95,7 @@
                 <div class="col-right">
 
                     <div class="timeline-item">
-                        <div class="timeline-meta">MAR 2026 — APR 2026</div>
+                        <div class="timeline-meta">MAR 2026 &mdash; APR 2026</div>
                         <div class="timeline-body">
                             <h3>DOST - Advanced Science and Technology Institute</h3>
                             <span class="role-title">Quantum Image Representation Intern</span>
@@ -116,7 +112,7 @@
                     </div>
 
                     <div class="timeline-item">
-                        <div class="timeline-meta">JUN 2025 — AUG 2025</div>
+                        <div class="timeline-meta">JUN 2025 &mdash; AUG 2025</div>
                         <div class="timeline-body">
                             <h3>Municipal Accounting Office (LGU - Rizal, Laguna)</h3>
                             <span class="role-title">ACCOUNTING INTERN</span>
@@ -133,7 +129,7 @@
                     </div>
 
                     <div class="timeline-item">
-                        <div class="timeline-meta">AUG 2020 — JAN 2024</div>
+                        <div class="timeline-meta">AUG 2020 &mdash; JAN 2024</div>
                         <div class="timeline-body">
                             <h3>Photomath, Inc.</h3>
                             <span class="role-title">FREELANCE MATH EXPERT</span>
@@ -174,7 +170,7 @@
                                 uniform tilings.</h3>
                             <p class="project-summary">Determining the absolute minimum number of colors to guarantee
                                 non-perfect coloring for each tiling.</p>
-                            <span class="project-explore-link">Read ↗</span>
+                            <span class="project-explore-link">Read <span class="btn-arrow">&#x2197;</span></span>
                         </a>
 
                         <a href="projects.html#weather" class="project-hook-item">
@@ -186,14 +182,14 @@
                                 Linear Regression.</h3>
                             <p class="project-summary">Evaluate predictive accuracy and error propagation of stochastic
                                 and deterministic time series models.</p>
-                            <span class="project-explore-link">Read ↗</span>
+                            <span class="project-explore-link">Read <span class="btn-arrow">&#x2197;</span></span>
                         </a>
                     </div>
 
                     <div class="projects-redirect-cta">
                         <a href="projects.html" class="big-redirect-btn">
                             <span class="btn-text">VIEW FULL PROJECTS LOGS</span>
-                            <span class="btn-arrow">↗</span>
+                            <span class="btn-arrow">&#x2197;</span>
                         </a>
                     </div>
                 </div>
@@ -250,7 +246,7 @@
                     <span class="section-index">CONNECT</span>
                 </div>
                 <div class="col-right contact-footer">
-                    <a href="mailto:sieggabrielsola12@gmail.com" class="action-link">LET'S CONNECT ↗</a>
+                    <a href="mailto:sieggabrielsola12@gmail.com" class="action-link">LET'S CONNECT <span class="btn-arrow">&#x2197;</span></a>
                     <span class="copyright">BASED IN RIZAL, LAGUNA</span>
                 </div>
             </div>
@@ -258,6 +254,26 @@
 
     </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggle = document.getElementById('theme-toggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', () => {
+                    const current = document.documentElement.getAttribute('data-theme');
+                    const next = current === 'dark' ? 'light' : 'dark';
+                    document.documentElement.setAttribute('data-theme', next);
+                    localStorage.setItem('theme', next);
+                });
+            }
+        });
+
+        // Sync theme across tabs
+        window.addEventListener('storage', (e) => {
+            if (e.key === 'theme') {
+                document.documentElement.setAttribute('data-theme', e.newValue);
+            }
+        });
+    </script>
 </body>
 
 </html>
