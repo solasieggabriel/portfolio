@@ -1409,23 +1409,3 @@ body {
         padding: 12px 18px;
     }
 }
-
-/* Theme Toggle Button */
-.theme-btn {
-    background: none;
-    border: none;
-    color: var(--ink-dark);
-    font-size: 1.4rem;
-    cursor: pointer;
-    margin-left: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease, color 0.3s ease;
-    padding: 0;
-}
-
-.theme-btn:hover {
-    transform: rotate(20deg) scale(1.1);
-    color: var(--accent-secondary);
-}
