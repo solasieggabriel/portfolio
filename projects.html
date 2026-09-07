@@ -1,11 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Sieg Gabriel Sola</title>
-    <link rel="stylesheet" href="style.css?v=2.0">
+    <link rel="stylesheet" href="style.css?v=2.1">
     <script>
         // Apply theme before paint to avoid flash
         (function () {
@@ -41,239 +41,292 @@
 
             <main class="blog-main">
 
-                <article class="blog-post" id="weather">
-                    <div class="post-clickable-title">
-                        <div class="post-meta">
-                            <span class="post-tag-green">APPLIED.STATISTICS</span>
-                            <span class="post-date">APR 2026</span>
-                            <span class="tag-badge">time series</span>
-                            <span class="tag-badge">statistics</span>
-                            <span class="tag-badge">course project</span>
+                <!-- 01 // DATA SCIENCE -->
+                <section class="projects-subsection" id="data-science">
+                    <div class="subsection-header">
+                        <div class="subsection-title-wrap">
+                            <span class="subsection-num">01 //</span>
+                            <h2 class="subsection-title">Data Science</h2>
                         </div>
-                        <h2 class="post-title">Evaluating 14-Day Ahead Weather Predictions in the City of Manila: A
-                            Comparative Multivariate Study of ARIMAX and Lagged Multiple Linear Regression</h2>
                     </div>
 
-                    <div class="post-content-expandable">
-                        <div class="post-content">
-                            <div class="project-abstract">
-                                <h3 class="abstract-title">ABSTRACT</h3>
-                                <p class="abstract-text">
-                                    We compare two methods for predicting Manila's weather 14 days in advance. This
-                                    study focused on forecasting three main variables: mean temperature, relative
-                                    humidity, and mean wind speed.
-                                    Using local weather data from January 2023 to March 2026, we tested a stochastic
-                                    model against a deterministic model, ARIMAX and Lagged Multiple Linear Regression
-                                    (LMLR), respectively.
-                                    Comprehensive preprocessing steps were implemented, incorporating stationarity
-                                    testing, first-order differencing, and Principal Component Analysis (PCA) to address
-                                    multicollinearity and dimensionality.
-                                    The dataset was also split into four local seasons: Habagat, Transition, Amihan, and
-                                    Dry Season. In terms of forecasting strategy, ARIMAX predicted recursively while
-                                    LMLR used a multi-step direct approach to keep errors from propagating over the 14
-                                    days.
-                                    We evaluated the models using standard error metrics like RMSE and MAE, alongside
-                                    statistical tests like the Diebold-Mariano test and the Paired Hotelling's T^2 test
-                                    to check the accuracy of the entire 14-day forecast.
-                                    Our results show that both models have different strengths and weaknesses depending
-                                    on the season, highlighting the trade-offs between stochastic and deterministic
-                                    forecasting.
-                                </p>
-                                <div class="abstract-coauthors">
-                                    <strong>Coauthors:</strong> K.N.L., D.L.O., C.M.R., J.S., J.S. &nbsp;|&nbsp;
-                                    <strong>Adviser:</strong> A.A.
+                    <div class="subsection-content">
+                        <ul class="data-science-list">
+                            <li class="data-science-item">
+                                <a href="https://github.com/solasieggabriel/Data-Science/tree/main/Predict%20EV%20Purchase%20Intent"
+                                    target="_blank" rel="noopener noreferrer" class="data-science-link">
+                                    <div class="post-meta">
+                                        <span class="post-tag-green">MACHINE.LEARNING</span>
+                                        <span class="tag-badge">classification</span>
+                                        <span class="tag-badge">feature importance</span>
+                                        <span class="tag-badge">predictive modeling</span>
+                                    </div>
+                                    <div class="data-science-title-wrap">
+                                        <h3 class="data-science-title">Predicting EV Purchase Intent</h3>
+                                        <span class="data-science-arrow">&#x2197;</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- 02 // ACADEMIC RESEARCH -->
+                <section class="projects-subsection" id="academic-research">
+                    <div class="subsection-header">
+                        <div class="subsection-title-wrap">
+                            <span class="subsection-num">02 //</span>
+                            <h2 class="subsection-title">Academic Research</h2>
+                        </div>
+                    </div>
+
+                    <div class="subsection-content">
+                        <article class="blog-post" id="weather">
+                            <div class="post-clickable-title">
+                                <div class="post-meta">
+                                    <span class="post-tag-green">APPLIED.STATISTICS</span>
+                                    <span class="post-date">APR 2026</span>
+                                    <span class="tag-badge">time series</span>
+                                    <span class="tag-badge">statistics</span>
+                                    <span class="tag-badge">course project</span>
                                 </div>
+                                <h2 class="post-title">Evaluating 14-Day Ahead Weather Predictions in the City of Manila: A
+                                    Comparative Multivariate Study of ARIMAX and Lagged Multiple Linear Regression</h2>
                             </div>
 
-                            <div class="project-single-figure">
-                                <div class="figure-card single-figure-card">
-                                    <div class="figure-img-container zoomable-container" id="weather-forecast-zoomable">
-                                        <div class="zoom-controls">
-                                            <button class="zoom-btn zoom-in" title="Zoom In">+</button>
-                                            <button class="zoom-btn zoom-out" title="Zoom Out">−</button>
+                            <div class="post-content-expandable">
+                                <div class="post-content">
+                                    <div class="project-abstract">
+                                        <h3 class="abstract-title">ABSTRACT</h3>
+                                        <p class="abstract-text">
+                                            We compare two methods for predicting Manila's weather 14 days in advance. This
+                                            study focused on forecasting three main variables: mean temperature, relative
+                                            humidity, and mean wind speed.
+                                            Using local weather data from January 2023 to March 2026, we tested a stochastic
+                                            model against a deterministic model, ARIMAX and Lagged Multiple Linear Regression
+                                            (LMLR), respectively.
+                                            Comprehensive preprocessing steps were implemented, incorporating stationarity
+                                            testing, first-order differencing, and Principal Component Analysis (PCA) to address
+                                            multicollinearity and dimensionality.
+                                            The dataset was also split into four local seasons: Habagat, Transition, Amihan, and
+                                            Dry Season. In terms of forecasting strategy, ARIMAX predicted recursively while
+                                            LMLR used a multi-step direct approach to keep errors from propagating over the 14
+                                            days.
+                                            We evaluated the models using standard error metrics like RMSE and MAE, alongside
+                                            statistical tests like the Diebold-Mariano test and the Paired Hotelling's T^2 test
+                                            to check the accuracy of the entire 14-day forecast.
+                                            Our results show that both models have different strengths and weaknesses depending
+                                            on the season, highlighting the trade-offs between stochastic and deterministic
+                                            forecasting.
+                                        </p>
+                                        <div class="abstract-coauthors">
+                                            <strong>Coauthors:</strong> K.N.L., D.L.O., C.M.R., J.S., J.S. &nbsp;|&nbsp;
+                                            <strong>Adviser:</strong> A.A.
                                         </div>
-                                        <div class="zoom-img-wrapper">
-                                            <img src="arimax_vs_lmlr_plots.png"
-                                                alt="ARIMAX vs LMLR Prediction Forecast Plots" class="figure-img">
+                                    </div>
+
+                                    <div class="project-single-figure">
+                                        <div class="figure-card single-figure-card">
+                                            <div class="figure-img-container zoomable-container" id="weather-forecast-zoomable">
+                                                <div class="zoom-controls">
+                                                    <button class="zoom-btn zoom-in" title="Zoom In">+</button>
+                                                    <button class="zoom-btn zoom-out" title="Zoom Out">−</button>
+                                                </div>
+                                                <div class="zoom-img-wrapper">
+                                                    <img src="arimax_vs_lmlr_plots.png"
+                                                        alt="ARIMAX vs LMLR Prediction Forecast Plots" class="figure-img">
+                                                </div>
+                                            </div>
+                                            <div class="figure-caption">
+                                                <span class="figure-label">Figure 1.</span> ARIMAX vs. LMLR Prediction Forecast
+                                                Plots. (Click +/− to zoom, drag to pan)
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="figure-caption">
-                                        <span class="figure-label">Figure 1.</span> ARIMAX vs. LMLR Prediction Forecast
-                                        Plots. (Click +/− to zoom, drag to pan)
+
+                                    <p>
+                                        The 12 plots in Figure 1, Actual vs ARIMAX vs LMLR, provide the final visual evidences
+                                        of the study. In these plots, the ARIMAX model consistently
+                                        tracks the fluctuations of the weather variables with higher fidelity than LMLR.
+                                        Conversely, the LMLR predictions appear as a smoothed approximation
+                                        of the seasonal mean, often lagging behind the rapid transitions' characteristics of the
+                                        Manila climate pulses.
+                                    </p>
+
+                                    <div class="project-single-figure">
+                                        <div class="figure-card single-figure-card">
+                                            <div class="figure-img-container">
+                                                <img src="error_accumulation_points.png"
+                                                    alt="ARIMAX vs Lagged Regression Weather Forecast Error Comparison"
+                                                    class="figure-img">
+                                            </div>
+                                            <div class="figure-caption">
+                                                <span class="figure-label">Figure 2.</span> Mean Error Accumulation Comparison.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p>
+                                        The mean absolute error (MAE) was averaged across the four seasonal folds and plotted
+                                        against the lead time. As seen in Figure 2, the LMLR
+                                        generally has a steeper error growth curve. The ARIMAX demonstrates superior error
+                                        dampening compared to LMLR. The stochastic Moving Average component
+                                        allowed the ARIMAX model to self-correct, whereas the LMLR's direct approach shows a
+                                        gradual separation from the actual atmospheric state as the 14-day limit approaches.
+                                    </p>
+                                </div>
+
+                                <div class="post-footer">
+                                    <a href="https://github.com/solasieggabriel/ARIMAX-and-Lagged-MLR-Weather-Forecasting-SLSU-"
+                                        class="read-more-btn" target="_blank" rel="noopener noreferrer">VIEW ON GITHUB <span
+                                            class="btn-arrow">&#x2197;</span></a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="blog-post" id="tiling">
+                            <div class="post-clickable-title">
+                                <div class="post-meta">
+                                    <span class="post-tag-yellow">PURE.MATHEMATICS</span>
+                                    <span class="post-date">DEC 2025</span>
+                                    <span class="tag-badge">crystallography</span>
+                                    <span class="tag-badge">group theory</span>
+                                    <span class="tag-badge">abstract algebra</span>
+                                    <span class="tag-badge">undergraduate thesis</span>
+                                </div>
+                                <h2 class="post-title">Minimum Colors for Non-perfect Coloring of the Eleven Euclidean Uniform
+                                    Tilings</h2>
+                            </div>
+
+                            <div class="post-content-expandable">
+                                <div class="post-content">
+                                    <div class="project-abstract">
+                                        <h3 class="abstract-title">ABSTRACT</h3>
+                                        <p class="abstract-text">
+                                            This study investigates the relationship between color symmetry and geometric
+                                            structure of the
+                                            11 Euclidean uniform tilings. A coloring is considered perfect if the tiling's
+                                            symmetries
+                                            preserve the color pattern through transformations. The primary objective of this
+                                            study is to
+                                            determine the minimum number of colors required to guarantee non-perfect coloring
+                                            where symmetry
+                                            is necessarily broken for each tiling. The methodology utilizes group theory,
+                                            specifically analyzing
+                                            transitive tile orbits and stabilizer subgroups. Orbits are classified as Type I,
+                                            those who share
+                                            the symmetries of regular tilings, and otherwise Type II, requiring a derived index
+                                            formula based on
+                                            point group and translation subgroup indices. By generating the complete set of
+                                            perfect coloring numbers
+                                            for each tiling, the minimum non-perfect coloring number is identified as the
+                                            smallest integer not
+                                            present in that set. Results show that regular tilings require minimal colors (2 or
+                                            3) for non-perfection.
+                                            However, tilings with multiple orbits require significantly more. For example, the
+                                            4.8.8 tiling requires
+                                            7 colors, while the 3.6.3.6 and 3.12.12 tilings both require 23 colors to ensure a
+                                            non-perfect coloring.
+                                            These findings quantify the threshold at which color symmetry is lost and provide a
+                                            structured framework
+                                            for analyzing non-symmetry in mathematical patterns.
+                                        </p>
+                                        <div class="abstract-coauthors">
+                                            <strong>Coauthors:</strong> K.N.L., M.F.P. &nbsp;|&nbsp; <strong>Adviser:</strong>
+                                            K.L., PhD
+                                        </div>
+                                    </div>
+
+                                    <div class="project-single-figure">
+                                        <div class="figure-card single-figure-card">
+                                            <div class="figure-img-container">
+                                                <img src="tiling_coloring.png"
+                                                    alt="Perfect and Non-Perfect Coloring of Tiling 4.4.4.4" class="figure-img">
+                                            </div>
+                                            <div class="figure-caption">
+                                                <span class="figure-label">Figure 1.</span> Perfect coloring (left) vs.
+                                                non-perfect coloring (right) of the regular tiling 4.4.4.4 with symmetry group
+                                                <em>G</em> = <em>p4m</em>.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <p>
+                                        Figure 1 illustrates two distinct 2-colorings of the regular 4.4.4.4 tiling, whose full
+                                        symmetry
+                                        group is G = p4m. On the left, the checkerboard pattern represents a perfect coloring,
+                                        where every symmetry
+                                        operation of the uncolored tiling preserves or cleanly permutes the color distribution.
+                                        On the right yields a
+                                        non-perfect coloring, where certain original symmetries (such as specific reflections or
+                                        rotations) are broken
+                                        by the color arrangement.
+
+                                        Importantly, while 2 colors are sufficient to produce a non-perfect coloring here, 2
+                                        colors do not represent the absolute
+                                        minimum color bound that forces or guarantees non-perfection for this tiling. Because a
+                                        2-color allocation can still
+                                        result in a perfect coloring (left), using 2 colors does not guarantee
+                                        symmetry-breaking. The core goal of this study
+                                        is to determine the minimum number of colors required to ensure non-perfection for each
+                                        of the 11 Euclidean uniform tilings.
+                                    </p>
+                                </div>
+
+                                <div class="post-footer">
+                                    <a href="#" class="read-more-btn open-pdf-btn"
+                                        data-pdf-src="Minimum Colors for Non-Perfect Coloring of the Eleven Euclidean Uniform Tilings.pdf"
+                                        data-pdf-title="Minimum Colors for Non-perfect Coloring of the Eleven Euclidean Uniform Tilings (journal)">READ
+                                        PDF <span class="btn-arrow">&#x2197;</span></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- 03 // OTHERS -->
+                <section class="projects-subsection" id="others">
+                    <div class="subsection-header">
+                        <div class="subsection-title-wrap">
+                            <span class="subsection-num">03 //</span>
+                            <h2 class="subsection-title">Others</h2>
+                        </div>
+                    </div>
+
+                    <div class="subsection-content">
+                        <article class="blog-post" id="risk-management">
+                            <div class="post-clickable-title">
+                                <div class="post-meta">
+                                    <span class="post-tag-yellow">RISK.MANAGEMENT</span>
+                                    <span class="tag-badge">operations research</span>
+                                    <span class="tag-badge">algorithmic optimization</span>
+                                </div>
+                                <h2 class="post-title">Simple Dynamic Hedging and Sequential Risk Management Engine</h2>
+                            </div>
+
+                            <div class="post-content-expandable">
+                                <div class="post-content">
+                                    <div class="project-abstract">
+                                        <h3 class="abstract-title">ABSTRACT</h3>
+                                        <p class="abstract-text">
+                                            I made a very simple tool that uses simple logic and basic Python coding to take the
+                                            luck out of risky, step-by-step situations in sports hedging.
+                                        </p>
+                                    </div>
+
+                                    <div class="post-footer" style="display: flex; gap: 15px; align-items: center;">
+                                        <a href="#" class="read-more-btn open-pdf-btn"
+                                            data-pdf-src="Dynamic Hedging and Sequential Risk Management Engine.pdf"
+                                            data-pdf-title="Dynamic Hedging and Sequential Risk Management Engine">READ PDF
+                                            <span class="btn-arrow">&#x2197;</span></a>
+                                        <a href="dynamic-hedging-app/dynamic-hedging-index.html"
+                                            class="read-more-btn">CONTINUATION <span class="btn-arrow">&#x2197;</span></a>
                                     </div>
                                 </div>
                             </div>
-
-                            <p>
-                                The 12 plots in Figure 1, Actual vs ARIMAX vs LMLR, provide the final visual evidences
-                                of the study. In these plots, the ARIMAX model consistently
-                                tracks the fluctuations of the weather variables with higher fidelity than LMLR.
-                                Conversely, the LMLR predictions appear as a smoothed approximation
-                                of the seasonal mean, often lagging behind the rapid transitions' characteristics of the
-                                Manila climate pulses.
-                            </p>
-
-                            <div class="project-single-figure">
-                                <div class="figure-card single-figure-card">
-                                    <div class="figure-img-container">
-                                        <img src="error_accumulation_points.png"
-                                            alt="ARIMAX vs Lagged Regression Weather Forecast Error Comparison"
-                                            class="figure-img">
-                                    </div>
-                                    <div class="figure-caption">
-                                        <span class="figure-label">Figure 2.</span> Mean Error Accumulation Comparison.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <p>
-                                The mean absolute error (MAE) was averaged across the four seasonal folds and plotted
-                                against the lead time. As seen in Figure 2, the LMLR
-                                generally has a steeper error growth curve. The ARIMAX demonstrates superior error
-                                dampening compared to LMLR. The stochastic Moving Average component
-                                allowed the ARIMAX model to self-correct, whereas the LMLR's direct approach shows a
-                                gradual separation from the actual atmospheric state as the 14-day limit approaches.
-                            </p>
-                        </div>
-
-                        <div class="post-footer">
-                            <a href="https://github.com/solasieggabriel/ARIMAX-and-Lagged-MLR-Weather-Forecasting-SLSU-"
-                                class="read-more-btn" target="_blank">VIEW ON GITHUB <span
-                                    class="btn-arrow">&#x2197;</span></a>
-                        </div>
+                        </article>
                     </div>
-                </article>
-
-                <article class="blog-post" id="tiling">
-                    <div class="post-clickable-title">
-                        <div class="post-meta">
-                            <span class="post-tag-yellow">PURE.MATHEMATICS</span>
-                            <span class="post-date">DEC 2025</span>
-                            <span class="tag-badge">crystallography</span>
-                            <span class="tag-badge">group theory</span>
-                            <span class="tag-badge">abstract algebra</span>
-                            <span class="tag-badge">undergraduate thesis</span>
-                        </div>
-                        <h2 class="post-title">Minimum Colors for Non-perfect Coloring of the Eleven Euclidean Uniform
-                            Tilings</h2>
-                    </div>
-
-                    <div class="post-content-expandable">
-                        <div class="post-content">
-                            <div class="project-abstract">
-                                <h3 class="abstract-title">ABSTRACT</h3>
-                                <p class="abstract-text">
-                                    This study investigates the relationship between color symmetry and geometric
-                                    structure of the
-                                    11 Euclidean uniform tilings. A coloring is considered perfect if the tiling's
-                                    symmetries
-                                    preserve the color pattern through transformations. The primary objective of this
-                                    study is to
-                                    determine the minimum number of colors required to guarantee non-perfect coloring
-                                    where symmetry
-                                    is necessarily broken for each tiling. The methodology utilizes group theory,
-                                    specifically analyzing
-                                    transitive tile orbits and stabilizer subgroups. Orbits are classified as Type I,
-                                    those who share
-                                    the symmetries of regular tilings, and otherwise Type II, requiring a derived index
-                                    formula based on
-                                    point group and translation subgroup indices. By generating the complete set of
-                                    perfect coloring numbers
-                                    for each tiling, the minimum non-perfect coloring number is identified as the
-                                    smallest integer not
-                                    present in that set. Results show that regular tilings require minimal colors (2 or
-                                    3) for non-perfection.
-                                    However, tilings with multiple orbits require significantly more. For example, the
-                                    4.8.8 tiling requires
-                                    7 colors, while the 3.6.3.6 and 3.12.12 tilings both require 23 colors to ensure a
-                                    non-perfect coloring.
-                                    These findings quantify the threshold at which color symmetry is lost and provide a
-                                    structured framework
-                                    for analyzing non-symmetry in mathematical patterns.
-                                </p>
-                                <div class="abstract-coauthors">
-                                    <strong>Coauthors:</strong> K.N.L., M.F.P. &nbsp;|&nbsp; <strong>Adviser:</strong>
-                                    K.L., PhD
-                                </div>
-                            </div>
-
-                            <div class="project-single-figure">
-                                <div class="figure-card single-figure-card">
-                                    <div class="figure-img-container">
-                                        <img src="tiling_coloring.png"
-                                            alt="Perfect and Non-Perfect Coloring of Tiling 4.4.4.4" class="figure-img">
-                                    </div>
-                                    <div class="figure-caption">
-                                        <span class="figure-label">Figure 1.</span> Perfect coloring (left) vs.
-                                        non-perfect coloring (right) of the regular tiling 4.4.4.4 with symmetry group
-                                        <em>G</em> = <em>p4m</em>.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <p>
-                                Figure 1 illustrates two distinct 2-colorings of the regular 4.4.4.4 tiling, whose full
-                                symmetry
-                                group is G = p4m. On the left, the checkerboard pattern represents a perfect coloring,
-                                where every symmetry
-                                operation of the uncolored tiling preserves or cleanly permutes the color distribution.
-                                On the right yields a
-                                non-perfect coloring, where certain original symmetries (such as specific reflections or
-                                rotations) are broken
-                                by the color arrangement.
-
-                                Importantly, while 2 colors are sufficient to produce a non-perfect coloring here, 2
-                                colors do not represent the absolute
-                                minimum color bound that forces or guarantees non-perfection for this tiling. Because a
-                                2-color allocation can still
-                                result in a perfect coloring (left), using 2 colors does not guarantee
-                                symmetry-breaking. The core goal of this study
-                                is to determine the minimum number of colors required to ensure non-perfection for each
-                                of the 11 Euclidean uniform tilings.
-                            </p>
-                        </div>
-
-                        <div class="post-footer">
-                            <a href="#" class="read-more-btn open-pdf-btn"
-                                data-pdf-src="Minimum Colors for Non-Perfect Coloring of the Eleven Euclidean Uniform Tilings.pdf"
-                                data-pdf-title="Minimum Colors for Non-perfect Coloring of the Eleven Euclidean Uniform Tilings (journal)">READ
-                                PDF <span class="btn-arrow">&#x2197;</span></a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="blog-post" id="risk-management">
-                    <div class="post-clickable-title">
-                        <div class="post-meta">
-                            <span class="post-tag-yellow">RISK.MANAGEMENT</span>
-                            <span class="post-date">JUN 2026</span>
-                            <span class="tag-badge">operations research</span>
-                            <span class="tag-badge">algorithmic optimization</span>
-                        </div>
-                        <h2 class="post-title">Simple Dynamic Hedging and Sequential Risk Management Engine</h2>
-                    </div>
-
-                    <div class="post-content-expandable">
-                        <div class="post-content">
-                            <div class="project-abstract">
-                                <h3 class="abstract-title">ABSTRACT</h3>
-                                <p class="abstract-text">
-                                    I made a very simple tool that uses simple logic and basic Python coding to take the
-                                    luck out of risky, step-by-step situations in sports hedging.
-                                </p>
-                            </div>
-
-                            <div class="post-footer" style="display: flex; gap: 15px; align-items: center;">
-                                <a href="#" class="read-more-btn open-pdf-btn"
-                                    data-pdf-src="Dynamic Hedging and Sequential Risk Management Engine.pdf"
-                                    data-pdf-title="Dynamic Hedging and Sequential Risk Management Engine">READ PDF
-                                    <span class="btn-arrow">&#x2197;</span></a>
-                                <a href="dynamic-hedging-app/dynamic-hedging-index.html"
-                                    class="read-more-btn">CONTINUATION <span class="btn-arrow">&#x2197;</span></a>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+                </section>
 
             </main>
 
