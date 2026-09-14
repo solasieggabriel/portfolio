@@ -1158,7 +1158,7 @@ body {
 
 /* Single Figure Layout */
 .project-single-figure {
-    max-width: 800px;
+    max-width: 980px;
     margin: 0 auto 35px auto;
 }
 
@@ -1176,28 +1176,31 @@ body {
 }
 
 .single-figure-card .figure-img-container {
-    aspect-ratio: 16 / 9;
+    width: 100%;
+    height: auto !important;
+    aspect-ratio: auto !important;
     background-color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 6px;
     overflow: hidden;
     margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
+    padding: 0;
 }
 
 .single-figure-card .figure-img {
     width: 100%;
-    height: 100%;
+    height: auto !important;
+    max-height: none;
     object-fit: contain;
-    opacity: 0.95;
+    display: block;
+    opacity: 1;
     transition: all 0.3s ease;
 }
 
 .single-figure-card:hover .figure-img {
     opacity: 1;
-    transform: scale(1.01);
+    transform: scale(1.005);
 }
 
 /* Read More Button styling */
@@ -1537,4 +1540,4 @@ body {
     .data-science-title {
         font-size: 1.35rem;
     }
-}
+}
