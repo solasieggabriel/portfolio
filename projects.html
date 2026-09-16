@@ -51,6 +51,55 @@
                     </div>
 
                     <div class="subsection-content">
+                        <article class="blog-post" id="quantum-rsi">
+                            <div class="post-clickable-title">
+                                <div class="post-meta">
+                                    <span class="post-tag-green">QUANTUM.COMPUTING</span>
+                                    <span class="tag-badge">quantum machine learning</span>
+                                    <span class="tag-badge">feature engineering</span>
+                                    <span class="tag-badge">VQC</span>
+                                </div>
+                                <h2 class="post-title">Benchmarking Statistical and Texture Features vs. Raw Pixel
+                                    Intensities on RSI</h2>
+                            </div>
+
+                            <div class="post-content-expandable">
+                                <div class="post-content">
+                                    <div class="project-abstract">
+                                        <h3 class="abstract-title">ABSTRACT</h3>
+                                        <p class="abstract-text">
+                                            In Noisy Intermediate-Scale Quantum (NISQ) computing, direct embedding
+                                            high-resolution imagery into variational quantum circuits is severely
+                                            constrained by qubit counts and circuit depth limitations. While linear
+                                            dimensionality reduction via PCA is widely used to compress pixel inputs, it
+                                            prioritizes global variance over localized spatial semantics. This study
+                                            investigates whether encoding statistical and spatial texture features into
+                                            a VQC provides a stronger inductive bias than compressed raw pixel
+                                            intensities. Using a balanced dataset of 4000 remote sensing images across
+                                            four classes (Sea/Lake, Forest, Residential, and AnnualCrop), a controlled
+                                            A/B benchmark was conducted comparing an 8-feature representation against an
+                                            8-component PCA baseline. Both models utilize an identical 8-qubit hybrid
+                                            circuit featuring AngleEmbedding, four strongly entangling layers, and
+                                            all-qubit Pauli-Z measurements, totaling 132 parameters. The
+                                            feature-engineered model achieved a peak test accuracy of 93.38% and a 68.3%
+                                            reduction in training loss relative to the PCA baseline (82.38% peak
+                                            accuracy), delivering a +11.0% jump in macro-average F1-score, with
+                                            identical runtimes. These results demonstrate that physically grounded
+                                            spatial-statistical priors enhance quantum state separability and
+                                            optimization dynamics, providing an efficient paradigm for quantum computer
+                                            vision on NISQ architectures.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="post-footer">
+                                    <a href="https://github.com/solasieggabriel/Data-Science/tree/main/Benchmarking%20Statistical%20and%20Texture%20Features%20vs.%20Raw%20Pixel%20Intensities%20on%20RSI"
+                                        class="read-more-btn" target="_blank" rel="noopener noreferrer">VIEW ON GITHUB
+                                        <span class="btn-arrow">&#x2197;</span></a>
+                                </div>
+                            </div>
+                        </article>
+
                         <ul class="data-science-list">
                             <li class="data-science-item">
                                 <a href="https://github.com/solasieggabriel/Data-Science/tree/main/Predict%20EV%20Purchase%20Intent"
@@ -58,7 +107,6 @@
                                     <div class="post-meta">
                                         <span class="post-tag-green">MACHINE.LEARNING</span>
                                         <span class="tag-badge">classification</span>
-                                        <span class="tag-badge">feature importance</span>
                                         <span class="tag-badge">predictive modeling</span>
                                     </div>
                                     <div class="data-science-title-wrap">
