@@ -37,7 +37,7 @@ input[type=number] {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
     background: var(--bg-canvas);
     color: var(--text-primary);
     min-height: 100vh;
@@ -259,7 +259,7 @@ select {
     color: var(--text-primary);
     padding: 8px 12px;
     border-radius: 6px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
     font-size: 0.9rem;
     outline: none;
     transition: border-color 0.2s, box-shadow 0.2s;
