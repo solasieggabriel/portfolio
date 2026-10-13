@@ -1207,6 +1207,52 @@ button, input, select, textarea {
     transform: scale(1.005);
 }
 
+/* Top Project Star Marker */
+.top-star {
+    color: #f59e0b;
+    font-size: 0.9em;
+    margin-right: 6px;
+    display: inline-block;
+    vertical-align: 1px;
+    filter: drop-shadow(0 0 2px rgba(245, 158, 11, 0.35));
+    transition: transform 0.2s ease;
+}
+
+.post-clickable-title:hover .top-star,
+.project-hook-item:hover .top-star {
+    transform: scale(1.2) rotate(6deg);
+}
+
+/* Mobile Mockup Figure Variant */
+.figure-mobile-wrap {
+    max-width: 380px !important;
+    margin: 0 auto 35px auto;
+}
+
+.mobile-mockup-card {
+    text-align: center;
+}
+
+.mobile-mockup-card .figure-img-container {
+    background-color: #f0f7ff !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 14px 0 !important;
+    border: 1px solid rgba(2, 132, 199, 0.18);
+}
+
+.mobile-mockup-card .figure-img {
+    max-height: 580px !important;
+    width: auto !important;
+    max-width: 90% !important;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
 /* Read More Button styling */
 .read-more-btn {
     font-family: var(--font-sans);
